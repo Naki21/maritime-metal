@@ -1,2 +1,79 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'reset';
+
+$green: RGBA(37, 174, 48, 1.00);
+$blue: RGBA(5, 61, 110, 1.00);
+$bg-green: RGBA(37, 174, 48, 0.7);
+$bg-blue: RGBA(5, 61, 110, 0.7);
+$lightgray: RGBA(211, 211, 211, 1.00);
+$main-font: 'Montserrat', sans-serif;
+
+body {
+  font-family: 'Montserrat', sans-serif;;
+}
+
+nav {
+  position: fixed;
+  right: 20px;
+  z-index: 1;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+.menu-icon {
+  margin: 10px 10px;
+  transition: .5s;
+  img {
+    height: 40px;
+  }
+}
+
+.open-menu {
+  transform: rotate(-90deg);
+}
+
+.details {
+  height: 760px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    height: 160px;
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 22px;
+    text-align: center;
+    margin: 80px 10px
+  }
+  button {
+    border: none;
+    height: 50px;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 10px;
+    background: $blue;
+    color: $lightgray;
+  }
+
+}
+
+.blue {
+  background: $bg-blue;
+}
+
+.green {
+  background: $bg-green;
+}
+
+.products {
+  display: flex ;
+  align-items: stretch;
+}
