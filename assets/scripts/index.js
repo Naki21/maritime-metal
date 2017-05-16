@@ -15,6 +15,20 @@ $(() => {
   // add clickhandlers
   clickhandlers.addHandlers();
   $('.menu-options').hide()
+
+  let test = document.querySelector(".svg-about-tab");
+  let about = document.querySelector(".about");
+
+
+  // this handler will be executed only once when the cursor moves over the unordered list
+  test.addEventListener("mouseenter", function( event )   {
+    // highlight the mouseenter target
+    about.style.height = "500px";
+  });
+  test.addEventListener("mouseout", function( event )   {
+    // highlight the mouseenter target
+    about.style.height = "0px";
+  });
 })
 
 // use require with a reference to bundle the file and use it in this file

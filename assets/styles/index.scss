@@ -1,79 +1,312 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,500,600,700,800,900|Oswald:200,400,500,600');
+
 
 $green: RGBA(37, 174, 48, 1.00);
+$lightgreen: RGBA(15, 243, 4, 1.00);
 $blue: RGBA(5, 61, 110, 1.00);
 $bg-green: RGBA(37, 174, 48, 0.7);
 $bg-blue: RGBA(5, 61, 110, 0.7);
 $lightgray: RGBA(211, 211, 211, 1.00);
 $main-font: 'Montserrat', sans-serif;
 
-body {
-  font-family: 'Montserrat', sans-serif;;
+body{
+  font-family: 'Montserrat', sans-serif;
 }
 
-nav {
+
+.skyline-background{
   position: fixed;
-  right: 20px;
-  z-index: 1;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  opacity: .5;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
-#mobile-menu {
-  display: none;
+.content-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 900px;
+    /* margin: 0 auto; */
+    border: 1px solid red;
+    /* z-index: 1; */
 }
 
-.menu-icon {
-  margin: 10px 10px;
-  transition: .5s;
-  img {
-    height: 40px;
+
+
+.header {
+    display: inline-block;
+    background-color: rgba(0, 35, 75, 0.8);
+    width: 100%;
+    height: 900px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 900px;
+    background-color: rgba(0, 87, 175, .7);
+    z-index: -1;
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
   }
 }
 
-.open-menu {
-  transform: rotate(-90deg);
+.sell-point-wrapper {
+    /* border: 1px solid yellow; */
+    text-align: center;
+    margin-top: 50px;
 }
 
-.details {
-  height: 760px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img {
-    height: 160px;
-    margin-top: 10px;
-  }
-  h1 {
-    font-size: 60px;
+.sell-point {
+    position: relative;
+    width: 160px;
+    /* border: 1px solid lightgreen; */
+    display: inline-block;
+    margin-right: 5%;
+
+
+  h3 {
+      font-size: 36pt;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: white;
   }
   p {
-    font-size: 22px;
+   font-size: 12pt;
+   line-height: 24px;
+   font-weight: 200;
+   color: rgb(193, 193, 193);
+  }
+  span {
+    display: block;
+    position: absolute;
+    right: -37px;
+    top: 0px;
+    /* float: right; */
+    background-color: #0ff304;
+    height: 112px;
+    width: 1px;
+    transform: rotateZ(26deg);
+}
+}
+
+.body-content{
+  background-color: white;
+  height: 900px;
+}
+
+.svg-wrapper {
+    position: absolute;
+    top: 520px;
+    z-index: 2;
+}
+
+.svg-stripes{
+  position: relative;
+  z-index: 1;
+svg{
+  filter: drop-shadow(0px 16px 12px #000);
+  }
+}
+
+.svg-triangle-invert {
+    position: absolute;
+    top: 0;
+  svg{
+    filter: drop-shadow(0px 16px 12px #000);
+  }
+}
+
+.about-tab {
+    position: relative;
+    // border: 1px solid cyan;
+    margin: -100px auto;
+    /* z-index: 2; */
+    p {
+    font-family: Oswald;
+    color: rgb(255, 255, 255);
+    font-size: 25pt;
+    letter-spacing: 2px;
     text-align: center;
-    margin: 80px 10px
+    /* margin: 0 auto; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    /* border: 1px solid green; */
   }
-  button {
-    border: none;
-    height: 50px;
-    width: 250px;
-    font-size: 30px;
-    border-radius: 10px;
-    background: $blue;
-    color: $lightgray;
+    .svg-about-tab {
+      width: 190px;
+      display: block;
+      margin: -0 auto;
   }
-
 }
 
-.blue {
-  background: $bg-blue;
+.about {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: #0d2f55;
+    display: flex;
+    justify-content: center;
+    // background-image: url(/assets/img/KRADIN-BOYS.jpg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right;
+    transition: .3s;
+
+  .svg-about-tab-base{
+    z-index: 5;
+    /* margin: 0 auto; */
+    position: absolute;
+    // bottom: -70px;
+    width: 220px;
+    height: 190px;
+    /* background-color: rebeccapurple; */
+}
+   div {
+    /* border: 1px solid white; */
+    position: relative;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border-right: 1px solid; */
+    &:before {
+    content: '';
+    width: 1px;
+    height: 280px;
+    background-color: lightgray;
+    position: absolute;
+    top: 110px;
+    right: -30px;
+    bottom: 0;
+  }
+    p:nth-of-type(1) {
+      color: #ffffff;
+      text-align: right;
+      font-size: 7pt;
+    }
+    p:nth-of-type(2) {
+      color: white;
+      text-align: right;
+      font-size: 18pt;
+    }
+    p:nth-of-type(3) {
+      color: white;
+      text-align: right;
+    }
+  }
 }
 
-.green {
-  background: $bg-green;
-}
+.about-txt {
+    /* border: 1px solid yellow; */
+    color: white;
+    /* text-align: center; */
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 100;
+    line-height: 22px;
+    margin-left: 60px;
+  }
+// .about-txt img{
+//     height: 200px;
+//     width: 200px;
+//     overflow: hidden;
+//     border-radius: 50%;
+// }
 
-.products {
-  display: flex ;
-  align-items: stretch;
-}
+
+/*//////////////ALEX SCROLL REVEAL TEST///////////////////////*/
+// body {
+//   font-family: 'Montserrat', sans-serif;;
+// }
+//
+// nav {
+//   position: fixed;
+//   right: 20px;
+//   z-index: 1;
+// }
+//
+// #mobile-menu {
+//   display: none;
+// }
+//
+// .menu-icon {
+//   margin: 10px 10px;
+//   transition: .5s;
+//   img {
+//     height: 40px;
+//   }
+// }
+//
+// .open-menu {
+//   transform: rotate(-90deg);
+// }
+//
+// .header {
+//   height: 760px;
+//   border: 1px solid black;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+//
+// .details {
+//   height: 760px;
+//   border: 1px solid black;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   img {
+//     height: 160px;
+//     margin-top: 10px;
+//   }
+//   h1 {
+//     font-size: 60px;
+//   }
+//   p {
+//     font-size: 22px;
+//     text-align: center;
+//     margin: 80px 10px
+//   }
+//   button {
+//     border: none;
+//     height: 50px;
+//     width: 250px;
+//     font-size: 30px;
+//     border-radius: 10px;
+//     background: $blue;
+//     color: $lightgray;
+//   }
+//
+// }
+//
+// .blue {
+//   background: $bg-blue;
+// }
+//
+// .green {
+//   background: $bg-green;
+// }
+//
+// .products {
+//   display: flex ;
+//   align-items: stretch;
+// }
