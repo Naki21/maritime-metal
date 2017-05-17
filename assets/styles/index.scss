@@ -1,7 +1,9 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'reset';
+@import 'vars';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,500,600,700,800,900|Oswald:200,400,500,600');
+@import 'carousel';
 
 
 $green: RGBA(37, 174, 48, 1.00);
