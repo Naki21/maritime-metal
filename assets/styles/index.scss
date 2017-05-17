@@ -1,13 +1,39 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'reset';
+@import 'vars';
+@import 'carousel';
 
-$green: RGBA(37, 174, 48, 1.00);
-$blue: RGBA(5, 61, 110, 1.00);
-$bg-green: RGBA(37, 174, 48, 0.7);
-$bg-blue: RGBA(5, 61, 110, 0.7);
-$lightgray: RGBA(211, 211, 211, 1.00);
-$main-font: 'Montserrat', sans-serif;
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-0px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;;
@@ -17,6 +43,7 @@ nav {
   position: fixed;
   right: 20px;
   z-index: 1;
+  transition: .5s;
 }
 
 #mobile-menu {
@@ -26,6 +53,7 @@ nav {
 .menu-icon {
   margin: 10px 10px;
   transition: .5s;
+  height: 40px;
   img {
     height: 40px;
   }

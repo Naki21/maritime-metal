@@ -1,8 +1,15 @@
+.what-we-buy {
+  background: $blue;
+  margin: 0 auto;
+  width: 70%;
+  height: 700px;
+}
+
 .container {
   width: 210px;
-  height: 140px;
   position: relative;
   margin: 0 auto 40px;
+  background-color: $blue;
   -webkit-perspective: 1100px;
      -moz-perspective: 1100px;
        -o-perspective: 1100px;
@@ -12,8 +19,6 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  // background-image: url(../img/logo.png);
-  // background-size: cover;
   -webkit-transform-style: preserve-3d;
      -moz-transform-style: preserve-3d;
        -o-transform-style: preserve-3d;
@@ -25,50 +30,64 @@
        -o-transition: -o-transform 1s;
           transition: transform 1s;
 }
-#carousel.panels-backface-invisible figure {
+#carousel.panels-backface-invisible div {
   -webkit-backface-visibility: hidden;
      -moz-backface-visibility: hidden;
        -o-backface-visibility: hidden;
           backface-visibility: hidden;
 }
 
-.logo{
-  height: 200px;
-  width: 200px;
-  background-image: url(../img/logo.png);
-  background-size: cover;
-}
-
-#carousel figure {
+#carousel div {
   display: block;
   position: absolute;
-  width: 186px;
-  height: 316px;
+  width: 180px;
+  height: 180px;
   left: 10px;
-  top: 10px;
-  border: 2px solid black;
+  top: 20px;
+  border: 2px solid white;
   line-height: 116px;
   font-size: 20px;
   font-weight: bold;
-  color: purple;
+  color: white;
   text-align: center;
+  background: RGBA(5, 61, 110, 0.7);
+  overflow: auto;
+
+  p {
+    height: 33%;
+  }
+  p:nth-of-type(1){
+    font-size: 41px;
+    color: $neon-green;
+    margin-top: -30px;
+  }
+  p:nth-of-type(2){
+    font-size: 21px;
+  }
+  p:nth-of-type(3){
+    font-size: 22px;
+    color: $neon-green;
+  }
 }
-.ready #carousel figure {
+
+.ready #carousel div {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
      -moz-transition: opacity 1s, -moz-transform 1s;
        -o-transition: opacity 1s, -o-transform 1s;
           transition: opacity 1s, transform 1s;
 }
-#options{
-  text-align: center;
-  position: relative;
-  top: 216px;
-}
 
-#previous, #next {
+
+.navigation-button {
   border: none;
   background: transparent;
   font-size: 40px;
   height: 40px;
-  margin: 0 150px;
+  margin-top: 80px;
+  &:nth-of-type(1){
+    float: right;
+  }
+  &:nth-of-type(2){
+    float: left;
+  }
 }
