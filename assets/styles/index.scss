@@ -37,7 +37,7 @@ body{
     margin: auto;
     width: 900px;
     /* margin: 0 auto; */
-    border: 1px solid red;
+    // border: 1px solid red;
     /* z-index: 1; */
 }
 
@@ -70,7 +70,7 @@ body{
 .sell-point-wrapper {
     /* border: 1px solid yellow; */
     text-align: center;
-    margin-top: 50px;
+    // margin-top: 50px;
 }
 
 .sell-point {
@@ -106,9 +106,42 @@ body{
 }
 }
 
+.contact-wrapper {
+    // border: 1px solid yellow;
+    text-align: center;
+    margin-top: 20px;
+    // margin-top: 30px;
+
+    div{
+      display: inline-block;
+      // width: 200px;
+      height: 100px;
+      img{
+        display: block;
+        width: 30px;
+        height: 30px;
+        }
+        p {
+        font-family: 'Oswald' , sans-serif;
+        letter-spacing: 1px;
+        color: white;
+        font-size: 9pt;
+        margin-top: 20px;
+        }
+    }
+}
+
+.location, .email{
+  width: 170px;
+}
+.office-phone, .fax{
+  width: 140px;
+}
+
+
 .body-content{
-  background-color: white;
-  height: 900px;
+  // background-color: white;
+  // height: 900px;
 }
 
 .svg-wrapper {
@@ -152,10 +185,36 @@ svg{
     /* border: 1px solid green; */
   }
     .svg-about-tab {
-      width: 190px;
-      display: block;
-      margin: -0 auto;
+    width: 190px;
+    display: block;
+    margin: -0 auto;
+    /* filter: drop-shadow(0px 5px 3px #000); */
   }
+}
+
+.star-wrapper{
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+   img {
+    display: inline-block;
+    width: 35px;
+    height: 50px;
+    margin: 0px 25px;
+  }
+}
+
+.left {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    transform: rotateZ(15deg);
+}
+.right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    transform: rotateZ(-18deg);
 }
 
 .about {
@@ -228,45 +287,77 @@ svg{
     margin-left: 60px;
   }
 
+.bounce-class{
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
 .services{
   height: 100%;
   position: relative;
-  border: 1px solid yellow;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1.75), rgba(255, 0, 0, 0) 40.71%);
+  // border: 1px solid yellow;
 }
-.services-description {
-  position: relative;
-  width: 100%;
-  height: 650px;
-  background-color: grey;
-  text-align: center;
 
-    h1 {
-    font-size: 42pt;
-    font-weight: 300;
-    color: white;
+.services > img {
+  display: block;
+  position: absolute;
+  top: -105px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 190px;
+  /* height: 190px; */
+  z-index: 1;
+}
+
+.services-description {
     position: relative;
-    display: inline-block;
-    margin-top: 160px;
+    width: 100%;
+    height: 880px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1.75), rgba(255, 0, 0, 0) 79.71%);
+    text-align: center;
+      h1 {
+      font-size: 42pt;
+      font-weight: 500;
+      color: rgb(15, 42, 72);
+      position: relative;
+      display: inline-block;
+      margin-top: 200px;
+      background-color: lightgrey;
+      padding: 15px 25px;
+      z-index: 1;
     }
-    &:before {
-    content: '';
-    position: absolute;
-    top: -150px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 6px;
-    width: 80px;
-    background-color: #0f2a48;
-    }
-    p {
-    font-size: 12pt;
-    font-weight: 100;
-    color: white;
-    line-height: 25px;
-    width: 86%;
-    margin: 90px auto;
+      p {
+      font-size: 12pt;
+      /* font-weight: 500; */
+      color: rgb(15, 42, 72);
+      line-height: 25px;
+      width: 72%;
+      margin: 50px auto;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -70px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          height: 330px;
+          width: 720px;
+          border: 9px solid rgb(255, 255, 255);
+          box-shadow: 0px 10px 18px 10px rgba(0, 0, 0, 0.7);
+          /* background-color: #0f2a48; */
+          /* z-index: -1; */
+        }
     }
 }
 
