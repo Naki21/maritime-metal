@@ -18,16 +18,20 @@ $(() => {
 
   let aboutTab = document.querySelector(".svg-about-tab");
   let about = document.querySelector(".about");
+  let aboutArrow = document.querySelector(".svg-about-tab-base svg polygon:nth-of-type(2)");
 
+  aboutArrow.classList.add("bounce-class");
 
   // this handler will be executed only once when the cursor moves over the unordered list
   aboutTab.addEventListener("mouseenter", function( event )   {
     // highlight the mouseenter target
     about.style.height = "500px";
+    aboutArrow.classList.remove("bounce-class");
   });
   aboutTab.addEventListener("mouseout", function( event )   {
     // highlight the mouseenter target
     about.style.height = "0px";
+    aboutArrow.classList.add("bounce-class");
   });
 })
 
