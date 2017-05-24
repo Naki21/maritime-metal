@@ -55,7 +55,7 @@ module.exports = {
         },
         {
           test: /\.(ttf|eot|svg|png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          loader: 'file-loader'
+          loader: 'file-loader?name=/img/[name].[ext]'
         },
         {
           test: /\.(hbs|handlebars)$/,
